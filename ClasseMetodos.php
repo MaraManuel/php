@@ -320,7 +320,10 @@ function atualizar($tabela, $campos, $valores, $id)
     $query .= " where id = '$id'";
 
     
-    if( mysqli_query( $conexao, $query) ):
+    $query = mysqli_query($conexao, $query);
+
+    
+    if( mysqli_num_rows($query) == 1  ):
        
        $json =json_encode(array('Mensagem'=>'Atualizado com sucesso!'));
            
@@ -352,8 +355,10 @@ function atualizarUmValor($tabela, $campo, $valor, $id)
 
     $query = "update ".$tabela." set ".$campo." = '".$valor."' where id = '$id'";
 
+    $query = mysqli_query($conexao, $query);
+
     
-    if( mysqli_query( $conexao, $query) ):
+    if( mysqli_num_rows($query) == 1  ):
        
        $json =json_encode(array('Mensagem'=>'Atualizado com sucesso!'));
            
@@ -381,7 +386,7 @@ function deletarRegisto($tabela, $id)
 
    
 
-    $query = "delete from ".$tabela." where id = '$id'";
+    $query = "delete from ".$tabela." where id = '".$id."'";
 
     $query = mysqli_query($conexao, $query);
 
@@ -401,5 +406,181 @@ function deletarRegisto($tabela, $id)
        endif;
     
 
+
+}
+
+
+function inserirSala($valores)
+{
+    global $conexao;
+
+    
+    $campos = ['tipo', 'nome', 'css'];
+
+    $tabela = "sala";
+
+    inserir($tabela, $campos, $valores);
+
+}
+
+function inserirCategoria($valores)
+{
+    global $conexao;
+
+    if(count($valores)>2):
+        $campos = ['id','nome', 'imagem'];
+    else:    
+        $campos = ['nome', 'imagem'];
+    endif;    
+
+    $tabela = "categoria";
+
+    inserir($tabela, $campos, $valores);
+
+}
+
+
+function inserirMesa($valores)
+{
+    global $conexao;
+
+    
+    $campos = ['nome', 'id_tipoMesa', 'paraQuantos','id_sala','posicao','estado'];
+
+    $tabela = "mesa";
+
+    inserir($tabela, $campos, $valores);
+
+}
+
+function inserirPedido($valores)
+{
+    global $conexao;
+
+    
+    $campos = ['id_cliente'];
+
+    $tabela = "pedido";
+
+    inserir($tabela, $campos, $valores);
+
+}
+
+function inserirProduto($valores)
+{
+    global $conexao;
+
+    
+    $campos = ['nome', 'descricao', 'preco', 'duracao', 'id_subcategoria', 'imagem'];
+
+    $tabela = "produto";
+
+    inserir($tabela, $campos, $valores);
+
+}
+
+
+function inserirReserva($valores)
+{
+    global $conexao;
+
+    //O Último campo da reserva ainda nao pode ter absolutamente nada (o campo 'confirmado')!
+    $campos = ['id_mesa', 'id_pedido', 'dataDeCriacao', 'dataParaReserva'];
+
+    $tabela = "reserva";
+
+    inserir($tabela, $campos, $valores);
+
+}
+
+
+function inserirSubcategoria($valores)
+{
+    global $conexao;
+
+    
+    $campos = ['nome', 'id_categoria'];
+
+    $tabela = "subcategoria";
+
+    inserir($tabela, $campos, $valores);
+
+}
+
+function inserirPedindoProduto($valores)
+{
+    global $conexao;
+
+    
+    $campos = ['id_produto', 'id_pedido', 'tipo'];
+
+    $tabela = "pedindo_produto";
+
+    inserir($tabela, $campos, $valores);
+
+}
+
+function inserirPedindoMesa($valores)
+{
+    global $conexao;
+
+    
+    $campos = ['id_cliente', 'id_mesa','data'];
+
+    $tabela = "pedindomesa";
+
+    inserir($tabela, $campos, $valores);
+
+}
+
+function inserirPedindoLimpeza($valores)
+{
+    global $conexao;
+
+    
+    $campos = ['id_mesa', 'data'];
+
+    $tabela = "pedindolimpeza";
+
+    inserir($tabela, $campos, $valores);
+
+}
+
+function inserirPedindoConta($valores)
+{
+    global $conexao;
+
+    
+    $campos = ['id_mesa', 'data'];
+
+    $tabela = "pedindoconta";
+
+    inserir($tabela, $campos, $valores);
+
+}
+
+function inserirConfirmaReserva($valores)
+{
+    global $conexao;
+
+    
+    $campos = ['id_reserva', 'data'];
+
+    $tabela = "confirmareserva";
+
+    inserir($tabela, $campos, $valores);
+
+}
+
+function inserirChamando($valores)
+{
+    global $conexao;
+
+    
+    $campos = ['id_mesa', 'data'];
+
+    $tabela = "chamando";
+
+    inserir($tabela, $campos, $valores);
 
 }
