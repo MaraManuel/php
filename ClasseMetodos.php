@@ -320,10 +320,8 @@ function atualizar($tabela, $campos, $valores, $id)
     $query .= " where id = '$id'";
 
     
-    $query = mysqli_query($conexao, $query);
-
     
-    if( mysqli_num_rows($query) == 1  ):
+    if( mysqli_query($conexao, $query)  ):
        
        $json =json_encode(array('Mensagem'=>'Atualizado com sucesso!'));
            
@@ -388,10 +386,8 @@ function deletarRegisto($tabela, $id)
 
     $query = "delete from ".$tabela." where id = '".$id."'";
 
-    $query = mysqli_query($conexao, $query);
-
     
-    if( mysqli_num_rows($query) == 1  ):
+    if( mysqli_query($conexao, $query)  ):
        
        $json =json_encode(array('Mensagem'=>'Registo deletado com sucesso!'));
            
@@ -410,6 +406,7 @@ function deletarRegisto($tabela, $id)
 }
 
 
+
 function inserirSala($valores)
 {
     global $conexao;
@@ -422,6 +419,29 @@ function inserirSala($valores)
     inserir($tabela, $campos, $valores);
 
 }
+
+function atualizarSala($campos, $valores, $id)
+{
+    global $conexao;
+
+    $tabela = "sala";
+
+    atualizar($tabela, $campos, $valores, $id);
+
+}
+
+function deletarSala($id)
+{
+    global $conexao;
+
+    $tabela = "sala";
+
+    deletarRegisto($tabela, $id);
+
+}
+
+
+
 
 function inserirCategoria($valores)
 {
@@ -436,6 +456,24 @@ function inserirCategoria($valores)
     $tabela = "categoria";
 
     inserir($tabela, $campos, $valores);
+
+}
+function atualizarCategoria($campos,$valores,$id)
+{
+    global $conexao; 
+
+    $tabela = "categoria";
+
+    atualizar($tabela, $campos, $valores, $id);
+
+}
+function deletarCategoria($id)
+{
+    global $conexao;
+
+    $tabela = "categoria";
+
+    deletarRegisto($tabela, $id);
 
 }
 

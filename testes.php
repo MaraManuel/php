@@ -39,9 +39,21 @@ switch($_SERVER['REQUEST_METHOD'])
 
     //$valoresSala = ['normal', 'Sala 3', 'sala-normal'];
     //inserirSala($valoresSala);
+    //$campos = ['tipo', 'nome'];
+    //$valores = ['normal', 'Sala 3'];
+    //$id = '5';
+    //atualizarSala($campos, $valores, $id);
+    //deletarSala($id);
 
-    //$valoresCategoria = ['4','Bebidas', 'icon_cocktail.png'];
+
+    //$valoresCategoria = ['5','Bebidas', 'icon_cocktail.png'];
     //inserirCategoria($valoresCategoria);
+    //$campos = ['nome'];
+    //$valores = ['Marisco'];
+    $id = '5';
+    //atualizarCategoria($campos, $valores, $id);
+    deletarCategoria($id);
+
 
     //$valoresMesa = ['Mesa 1', '1', '4', '1', '00', 'livre'];
     //inserirMesa($valoresMesa);
@@ -74,6 +86,8 @@ switch($_SERVER['REQUEST_METHOD'])
     //$valoresChamando = ['1','2022-06-08 21:08:38'];
     //inserirChamando($valoresChamando);
 
+
+    
 
 
   
