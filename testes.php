@@ -50,41 +50,101 @@ switch($_SERVER['REQUEST_METHOD'])
     //inserirCategoria($valoresCategoria);
     //$campos = ['nome'];
     //$valores = ['Marisco'];
-    $id = '5';
+    //$id = '5';
     //atualizarCategoria($campos, $valores, $id);
-    deletarCategoria($id);
+    //deletarCategoria($id);
 
 
-    //$valoresMesa = ['Mesa 1', '1', '4', '1', '00', 'livre'];
+    //$valoresMesa = ['Mesa 2', '1', '4', '1', '00', 'livre'];
     //inserirMesa($valoresMesa);
+    //$campos = ['nome'];
+    //$valores = ['Mesa 3'];
+    //$id = '3';
+    //atualizarMesa($campos, $valores, $id);
+    //deletarMesa($id);
 
     //$valoresProduto = ['Panquecas', 'Cinco panquecas com mel derramado e mirtilos','3750','00:17:00','3','sobremesa2.jpeg'];
     //inserirProduto($valoresProduto);
+    //$campos = ['nome'];
+    //$valores = ['Panqueca'];
+    //$id = '1';
+    //atualizarProduto($campos, $valores, $id);
+    //deletarProduto($id);
+
+
 
     //O Último campo da reserva ainda nao pode ter absolutamente nada (o campo 'confirmado')!
     //$valoresReserva = ['1', '1', '2022-06-03 21:08:38', '2022-06-14 20:00:00'];
     //inserirReserva($valoresReserva);
+    //$campos = ['id_mesa'];
+    //$valores = ['2'];
+    //$id = '2';
+    //atualizarReserva($campos, $valores, $id);
+    //deletarReserva($id);
+
+    
+
 
     //$valoresSubcategoria = ['Sementes','1'];
     //inserirSubcategoria($valoresSubcategoria);
+    //$campos = ['nome'];
+    //$valores = ['Sementess'];
+    //$id = '1';
+    //atualizarSubcategoria($campos, $valores, $id);
+    //deletarSubcategoria($id);
+
+    //---------------------------------------------
 
     //$valoresPedindoProduto = ['1','1','vago'];
     //inserirPedindoProduto($valoresPedindoProduto);
+    //$campos = ['tipo'];
+    //$valores = ['entrada'];
+    //$id = '2';
+    //atualizarPedindoProduto($campos, $valores, $id);
+    //deletarPedindoProduto($id);
 
     //$valoresPedindoMesa = ['1','1','2022-06-08 21:08:38'];
     //inserirPedindoMesa($valoresPedindoMesa);
+    //$campos = ['id_cliente'];
+    //$valores = ['2'];
+    //$id = '2';
+    //atualizarPedindoMesa($campos, $valores, $id);
+    //deletarPedindoMesa('1');
 
     //$valoresPedindoLimpeza = ['1','2022-06-08 21:08:38'];
     //inserirPedindoLimpeza($valoresPedindoLimpeza);
+    //$campos = ['id_mesa'];
+    //$valores = ['2'];
+    //$id = '2';
+    //atualizarPedindoLimpeza($campos, $valores, $id);
+    //deletarPedindoLimpeza('1');
 
     //$valoresPedindoConta = ['1','2022-06-08 21:08:38'];
     //inserirPedindoConta($valoresPedindoConta);
+    //$campos = ['id_mesa'];
+    //$valores = ['2'];
+    //$id = '2';
+    //atualizarPedindoConta($campos, $valores, $id);
+    //deletarPedindoConta('1');
 
-    //$valoresConfirmaReserva = ['1','2022-06-08 21:08:38'];
-    //inserirConfirmaReserva($valoresConfirmaReserva);
+    /*
+    $valoresConfirmaReserva = ['1','2022-06-08 21:08:38'];
+    inserirConfirmaReserva($valoresConfirmaReserva);
+    $campos = ['id_reserva'];
+    $valores = ['2'];
+    $id = '2';
+    atualizarConfirmaReserva($campos, $valores, $id);
+    deletarConfirmaReserva('1');
+    */
 
-    //$valoresChamando = ['1','2022-06-08 21:08:38'];
-    //inserirChamando($valoresChamando);
+    /*
+    $valoresChamando = ['1','2022-06-08 21:08:38'];
+    inserirChamando($valoresChamando);
+    $campos = ['id_mesa'];
+    $valores = ['2'];
+    $id = '2';
+    atualizarChamando($campos, $valores, $id);
+    deletarChamando('1');*/
 
 
     

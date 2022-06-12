@@ -491,6 +491,27 @@ function inserirMesa($valores)
 
 }
 
+function atualizarMesa($campos,$valores,$id)
+{
+    global $conexao;
+
+     
+    $tabela = "mesa";
+
+    atualizar($tabela, $campos, $valores, $id);
+
+}
+
+function deletarMesa($id)
+{
+    global $conexao;
+
+    $tabela = "mesa";
+
+    deletarRegisto($tabela, $id);
+
+}
+
 function inserirPedido($valores)
 {
     global $conexao;
@@ -503,6 +524,27 @@ function inserirPedido($valores)
     inserir($tabela, $campos, $valores);
 
 }
+function atualizarPedido($campos,$valores,$id)
+{
+    global $conexao;
+
+     
+    $tabela = "pedido";
+
+    atualizar($tabela, $campos, $valores, $id);
+
+}
+
+function deletarPedido($id)
+{
+    global $conexao;
+
+    $tabela = "pedido";
+
+    deletarRegisto($tabela, $id);
+
+}
+
 
 function inserirProduto($valores)
 {
@@ -514,6 +556,26 @@ function inserirProduto($valores)
     $tabela = "produto";
 
     inserir($tabela, $campos, $valores);
+
+}
+function atualizarProduto($campos,$valores,$id)
+{
+    global $conexao;
+
+     
+    $tabela = "produto";
+
+    atualizar($tabela, $campos, $valores, $id);
+
+}
+
+function deletarProduto($id)
+{
+    global $conexao;
+
+    $tabela = "produto";
+
+    deletarRegisto($tabela, $id);
 
 }
 
@@ -530,6 +592,25 @@ function inserirReserva($valores)
     inserir($tabela, $campos, $valores);
 
 }
+function atualizarReserva($campos,$valores,$id)
+{
+    global $conexao;
+
+    $tabela = "reserva";
+
+    atualizar($tabela, $campos, $valores, $id);
+
+}
+
+function deletarReserva($id)
+{
+    global $conexao;
+
+    $tabela = "reserva";
+
+    deletarRegisto($tabela, $id);
+
+}
 
 
 function inserirSubcategoria($valores)
@@ -544,6 +625,26 @@ function inserirSubcategoria($valores)
     inserir($tabela, $campos, $valores);
 
 }
+function atualizarSubcategoria($campos,$valores,$id)
+{
+    global $conexao;
+
+    $tabela = "subcategoria";
+
+    atualizar($tabela, $campos, $valores, $id);
+
+}
+
+function deletarSubcategoria($id)
+{
+    global $conexao;
+
+    $tabela = "subcategoria";
+
+    deletarRegisto($tabela, $id);
+
+}
+
 
 function inserirPedindoProduto($valores)
 {
@@ -555,6 +656,25 @@ function inserirPedindoProduto($valores)
     $tabela = "pedindo_produto";
 
     inserir($tabela, $campos, $valores);
+
+}
+function atualizarPedindoProduto($campos,$valores,$id)
+{
+    global $conexao;
+
+    $tabela = "pedindo_produto";
+
+    atualizar($tabela, $campos, $valores, $id);
+
+}
+
+function deletarPedindoProduto($id)
+{
+    global $conexao;
+
+    $tabela = "pedindo_produto";
+
+    deletarRegisto($tabela, $id);
 
 }
 
@@ -570,6 +690,25 @@ function inserirPedindoMesa($valores)
     inserir($tabela, $campos, $valores);
 
 }
+function atualizarPedindoMesa($campos,$valores,$id)
+{
+    global $conexao;
+
+    $tabela = "pedindomesa";
+
+    atualizar($tabela, $campos, $valores, $id);
+
+}
+
+function deletarPedindoMesa($id)
+{
+    global $conexao;
+
+    $tabela = "pedindomesa";
+
+    deletarRegisto($tabela, $id);
+
+}
 
 function inserirPedindoLimpeza($valores)
 {
@@ -581,6 +720,25 @@ function inserirPedindoLimpeza($valores)
     $tabela = "pedindolimpeza";
 
     inserir($tabela, $campos, $valores);
+
+}
+function atualizarPedindoLimpeza($campos,$valores,$id)
+{
+    global $conexao;
+
+    $tabela = "pedindolimpeza";
+
+    atualizar($tabela, $campos, $valores, $id);
+
+}
+
+function deletarPedindoLimpeza($id)
+{
+    global $conexao;
+
+    $tabela = "pedindolimpeza";
+
+    deletarRegisto($tabela, $id);
 
 }
 
@@ -596,6 +754,26 @@ function inserirPedindoConta($valores)
     inserir($tabela, $campos, $valores);
 
 }
+function atualizarPedindoConta($campos,$valores,$id)
+{
+    global $conexao;
+
+    $tabela = "pedindoconta";
+
+    atualizar($tabela, $campos, $valores, $id);
+
+}
+
+function deletarPedindoConta($id)
+{
+    global $conexao;
+
+    $tabela = "pedindoconta";
+
+    deletarRegisto($tabela, $id);
+
+}
+
 
 function inserirConfirmaReserva($valores)
 {
@@ -609,6 +787,26 @@ function inserirConfirmaReserva($valores)
     inserir($tabela, $campos, $valores);
 
 }
+function atualizarConfirmaReserva($campos,$valores,$id)
+{
+    global $conexao;
+
+    $tabela = "confirmareserva";
+
+    atualizar($tabela, $campos, $valores, $id);
+
+}
+
+function deletarConfirmaReserva($id)
+{
+    global $conexao;
+
+    $tabela = "confirmareserva";
+
+    deletarRegisto($tabela, $id);
+
+}
+
 
 function inserirChamando($valores)
 {
@@ -620,5 +818,24 @@ function inserirChamando($valores)
     $tabela = "chamando";
 
     inserir($tabela, $campos, $valores);
+
+}
+function atualizarChamando($campos,$valores,$id)
+{
+    global $conexao;
+
+    $tabela = "chamando";
+
+    atualizar($tabela, $campos, $valores, $id);
+
+}
+
+function deletarChamando($id)
+{
+    global $conexao;
+
+    $tabela = "chamando";
+
+    deletarRegisto($tabela, $id);
 
 }
